@@ -1,6 +1,6 @@
 import {useRef} from "react";
 import {FaBars, FaTimes} from "react-icons/fa";
-import "../Styles/main.css"; 
+import "../styles/main.css"; 
 import logo from '../assets/marvel-logo.png';
 
 function Header(){

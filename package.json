@@ -1,2 +1,1 @@
-{"devDependencies":{"gh-pages":"^6.1.1"}}
-
+{"devDependencies":{"gh-pages":"^6.1.1"},"dependencies":{"sass":"^1.77.7"}}
