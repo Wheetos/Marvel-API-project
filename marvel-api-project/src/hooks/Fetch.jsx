@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import * as React from 'react'
 /*This Fetch function uses the useEffect() to fetch the Marvel API hash
 and then returns it back as a json. It then logs the json, and 
 also puts it into the setMarvel const */
@@ -16,11 +17,14 @@ const Fetch = () => {
     }, []);
 
     return(
-        <div>
-            {marvel.map((data) => (
-                <p key={data.id}>{data.name}</p>
+        <React.Fragment>
+             {marvel.map((data) => (
+                <div key ={data.id}>
+                <img src={`${data.thumbnail.path}.${data.thumbnail.extension}`} alt={data.name} />
+                <p>{data.name}</p>
+                </div>
             ))}
-        </div>
+        </React.Fragment>
     );
 }
 export default Fetch;
