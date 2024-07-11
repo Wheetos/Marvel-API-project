@@ -14,10 +14,11 @@ function Header(){
 
     return(
         <header>
-            <img src={logo} width="150px" /> 
+            <img src={logo} /> 
             <nav ref={navRef}>
                 <a href="/#">Characters</a>
                 <a href="/#">Events</a>
+                <a href="/#">About</a>
                 <button className="nav-btn nav-close-btn" onClick={showNavBar}>
                     <FaTimes/>
                 </button>

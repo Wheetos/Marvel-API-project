@@ -1,4 +1,3 @@
-import Fetch from "../hooks/Fetch";
 import * as React from 'react'
 
 function Home(){
@@ -9,7 +8,6 @@ function Home(){
                 <h4>Get hooked on a hearty helping
              of heroes and villians.
                 </h4>
-            <Fetch></Fetch>
         </React.Fragment>
         );
     }

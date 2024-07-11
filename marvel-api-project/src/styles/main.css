@@ -16,6 +16,10 @@ header {
 	color: var(--textColor);
 }
 
+header img {
+	width: 200px;
+}
+
 nav a {
 	margin: 0 1rem;
 	color: var(--textColor);
@@ -44,7 +48,7 @@ nav {
 	align-items: center;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 480px) {
 	header .nav-btn {
 		visibility: visible;
 		opacity: 1;
