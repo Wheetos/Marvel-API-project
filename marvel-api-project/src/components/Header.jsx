@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/main.css";
 import logo from "../assets/marvel-logo.png";
+import React from "react";
 
 function Header() {
   const navRef = useRef();

@@ -23,10 +23,10 @@ const Fetch = () => {
 
   return (
     <React.Fragment>
-      <div class="wrapper">
+      <div className="wrapper">
         {marvel.map((data) => (
           <div key={data.id}>
-            <div class="card">
+            <div className="card">
               <img
                 src={`${data.thumbnail.path}.${data.thumbnail.extension}`}
                 alt={data.name}
@@ -37,7 +37,7 @@ const Fetch = () => {
         ))}
         {marvel2.map((data) => (
           <div key={data.id}>
-            <div class="card">
+            <div className="card">
               <img
                 src={`${data.thumbnail.path}.${data.thumbnail.extension}`}
                 alt={data.name}
