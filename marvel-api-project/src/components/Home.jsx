@@ -4,20 +4,18 @@ import "../styles/main.css";
 function Home() {
   return (
     <React.Fragment>
-      <div className="hero-container">
-      <div className="wrapper-img">
-        <div className="wrapper-header">
+      <div className="flexbox">
+        <div className="hero-img">
+          <div className="hero-text">
           <h1>Welcome to Marvel!</h1>
           <h4>
             Sit back, relax, and take a look at all of the heroes and villians
             here!
           </h4>
+          </div>
         </div>
-        </div>
-      </div>
-      <div className="wrapper">
-        <div className="wrapper-featured">
-          <h3>Featured characters</h3>
+        <div className="container">
+        <h3>Featured characters</h3>
         </div>
       </div>
     </React.Fragment>
