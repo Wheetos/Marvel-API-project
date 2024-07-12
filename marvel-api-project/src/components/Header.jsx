@@ -13,20 +13,22 @@ function Header() {
   console.log(logo);
 
   return (
-    <header>
-      <img src={logo} />
-      <nav ref={navRef}>
-        <a href="/#">Characters</a>
-        <a href="/#">Events</a>
-        <a href="/#">About</a>
-        <button className="nav-btn nav-close-btn" onClick={showNavBar}>
-          <FaTimes />
+    <React.Fragment>
+      <header>
+        <img src={logo} />
+        <nav ref={navRef}>
+          <a href="/#">Characters</a>
+          <a href="/#">Events</a>
+          <a href="/#">About</a>
+          <button className="nav-btn nav-close-btn" onClick={showNavBar}>
+            <FaTimes />
+          </button>
+        </nav>
+        <button className="nav-btn" onClick={showNavBar}>
+          <FaBars />
         </button>
-      </nav>
-      <button className="nav-btn" onClick={showNavBar}>
-        <FaBars />
-      </button>
-    </header>
+      </header>
+    </React.Fragment>
   );
 }
 
