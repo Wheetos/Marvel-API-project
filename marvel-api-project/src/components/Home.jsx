@@ -1,5 +1,6 @@
 import * as React from "react";
 import "../styles/main.css";
+import Feat from "../hooks/Feat.jsx";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
         </div>
         <div className="container">
         <h3>Featured characters</h3>
+        <Feat></Feat>
         </div>
       </div>
     </React.Fragment>
