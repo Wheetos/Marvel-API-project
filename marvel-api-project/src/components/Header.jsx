@@ -1,33 +1,26 @@
-import { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import "../styles/main.css";
+import "../styles/header.css";
 import logo from "../assets/marvel-logo.png";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
-  const navRef = useRef();
-
-  const showNavBar = () => {
-    navRef.current.classList.toggle("responsive_nav");
-  };
-
-  console.log(logo);
-
   return (
     <React.Fragment>
-      <header>
-        <img src={logo} />
-        <nav ref={navRef}>
-          <a href="/#">Characters</a>
-          <a href="/#">Events</a>
-          <a href="/#">About</a>
-          <button className="nav-btn nav-close-btn" onClick={showNavBar}>
-            <FaTimes />
-          </button>
+      <header className="header">
+        <img src={logo} className="header-logo" />
+        <nav>
+          <ul>
+            <li>
+              <Link to="/Marvel-API-project/Characters">Characters</Link>
+            </li>
+            <li>
+              <Link to="/Marvel-API-project/Characters">Events</Link>
+            </li>
+            <li>
+              <Link to="/Marvel-API-project/Characters">About</Link>
+            </li>
+          </ul>
         </nav>
-        <button className="nav-btn" onClick={showNavBar}>
-          <FaBars />
-        </button>
       </header>
     </React.Fragment>
   );
