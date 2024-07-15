@@ -1,6 +1,7 @@
 import * as React from "react";
 import "../styles/main.css";
 import Feat from "../hooks/Feat.jsx";
+import Footer from "../components/Footer.jsx";
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
         <h3>Featured characters</h3>
         <Feat></Feat>
         </div>
+        <Footer></Footer>
       </div>
     </React.Fragment>
   );

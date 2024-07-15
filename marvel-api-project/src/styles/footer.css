@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap");
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.footer {
+  display: flex;
+  flex-direction: column;
   background-color: #29335c;
   color: white;
-  text-align: center;
+  align-items: center;
+  margin-top: auto;
 }
 
-footer h1 {
+.footer h1 {
   font-size: 15px;
 }

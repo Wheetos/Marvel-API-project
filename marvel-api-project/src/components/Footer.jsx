@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <React.Fragment>
-      <footer>
+      <footer className="footer">
         <h1>Data provided by Marvel. &copy; 2024 Marvel</h1>
         <h1>Copyright &copy; Julio Andrade-Jimenez</h1>
       </footer>
