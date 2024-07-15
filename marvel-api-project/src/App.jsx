@@ -1,12 +1,17 @@
 import React from "react";
-import Header from "./components/Header";
-import Home from "./components/Home";
+import NotFound from "./pages/NotFound";
+import Home from "./pages/Home";
+import Characters from "./pages/Characters";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <React.Fragment>
-      <Header></Header>
-      <Home></Home>
+      <Routes>
+        <Route path="/Marvel-API-project/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/Marvel-API-project/Characters" element={<Characters />} />
+      </Routes>
     </React.Fragment>
   );
 }
