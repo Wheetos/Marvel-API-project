@@ -9,6 +9,13 @@
   align-items: center;
   justify-content: center;
 }
+
+.error-container-two {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
 .error-img {
   width: 75rem;
 }
