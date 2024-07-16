@@ -1,21 +1,41 @@
 :root {
-    --mainColor: #29335c;
-    --mainColorLight: #5767aa;
-    --secondaryColor: #db2b39;
-    --textColor: #eee;
-  }
-  
-  .header {
-    display: flex;
-    height: 80px;
-    background-color: var(--mainColor);
-    color: var(--textColor);
-  }
-  
-  .header-logo {
-    width: 300px;
-  }
+  --mainColor: #29335c;
+  --mainColorLight: #5767aa;
+  --secondaryColor: #db2b39;
+  --textColor: #eee;
+}
 
-  .navbar {
-    display: flex;
-  }
+.header {
+  display: flex;
+  height: 80px;
+  background-color: var(--mainColor);
+  color: var(--textColor);
+  align-items: center;
+  justify-content: center;
+  padding: 0 260px;
+}
+
+.header-logo {
+  width: 215px;
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  height: 85px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 0px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--textColor);
+  display: flex;
+}
+
+.navbar a:hover {
+  color: red;
+}
