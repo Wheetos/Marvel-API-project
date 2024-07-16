@@ -8,7 +8,7 @@ function NotFound() {
   return (
     <React.Fragment>
       <Header />
-      <nav className={styles.flexbox}>
+      <div className={styles.flexbox}>
         <div className={styles["error-container"]}>
           <img src={logo} className={styles["error-img"]}></img>
           <div className={styles["error-txt"]}>
@@ -20,7 +20,7 @@ function NotFound() {
             </p>
           </div>
         </div>
-      </nav>
+      </div>
       <Footer />
     </React.Fragment>
   );
