@@ -6,23 +6,21 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import logo from "../assets/spidey-throws.png";
 
-function Splash() {
+const Splash = () => {
   const { id } = useParams();
   const [marvel, setMarvel] = useState([]);
+  const [comic, setComic] = useState([]);
   useEffect(() => {
-    fetch(
+    const request1 = fetch(
       `https://gateway.marvel.com/v1/public/characters/${id}?&ts=1&apikey=869df33cbed7f29ac109149da9ccf83e&hash=d43a9e6097fe7b58c5be2871a3983e8c`
     )
-      .then((res) => {
-        //If the ID exists, then the json will be returned and set as setMarvel.
-        //Otherwise, it throws an error to the console and displays it to the end user
-        if (res.ok) {
-          return res.json();
+      .then((response) => {
+        //If the ID exists in the URL, then the page will load with information of the character's ID.
+        //Otherwise, it will return an error to the user
+        if (response.ok) {
+          return response.json();
         }
         throw new Error("Something went wrong!");
-      })
-      .then((data) => {
-        setMarvel(data.data.results);
       })
       .catch((error) => {
         console.log(error);
@@ -31,6 +29,15 @@ function Splash() {
           element.style.display = "flex";
         }
       });
+    const request2 = fetch(
+      `https://gateway.marvel.com/v1/public/characters/${id}/comics?format=comic&formatType=comic&noVariants=false&dateDescriptor=thisMonth&limit=3&ts=1&apikey=869df33cbed7f29ac109149da9ccf83e&hash=d43a9e6097fe7b58c5be2871a3983e8c`
+    ).then((response) => response.json());
+
+    Promise.all([request1, request2]).then(([data1, data2]) => {
+      setMarvel(data1.data.results);
+      setComic(data2.data.results);
+      console.log(data2.data.results);
+    });
   }, []);
 
   return (
@@ -57,6 +64,18 @@ function Splash() {
                 src={`${data.thumbnail.path}.${data.thumbnail.extension}`}
                 alt={data.name}
               />
+              <p>{data.description}</p>
+            </div>
+          </div>
+        ))}
+        {comic.map((data) => (
+          <div key={data.id}>
+            <div>
+              <h1>{data.title}</h1>
+              <img
+                src={`${data.thumbnail.path}.${data.thumbnail.extension}`}
+                alt={data.name}
+              />
             </div>
           </div>
         ))}
@@ -64,6 +83,6 @@ function Splash() {
       </div>
     </React.Fragment>
   );
-}
+};
 
 export default Splash;
