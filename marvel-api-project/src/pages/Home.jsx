@@ -11,19 +11,19 @@ function Home() {
       <div className="flexbox">
         <div className="hero-img">
           <div className="hero-text">
-          <h1>Welcome to Marvel!</h1>
-          <h4>
-            Sit back, relax, and take a look at all of the heroes and villians
-            here!
-          </h4>
+            <h1>Welcome to Marvel!</h1>
+            <h4>
+              Sit back, relax, and take a look at all of the heroes and villians
+              here!
+            </h4>
           </div>
         </div>
         <div className="container">
-        <h3>Featured characters</h3>
-        <Feat></Feat>
+          <h3>Featured characters</h3>
+          <Feat />
         </div>
-        <Footer></Footer>
       </div>
+      <Footer />
     </React.Fragment>
   );
 }
