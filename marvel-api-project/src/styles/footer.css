@@ -6,9 +6,11 @@
   background-color: #29335c;
   color: white;
   align-items: center;
+  gap: 0.5rem;
   margin-top: auto;
+  padding: 20px 0px 20px 0px;
 }
 
 .footer h1 {
-  font-size: 15px;
+  font-size: 0.95rem;
 }
