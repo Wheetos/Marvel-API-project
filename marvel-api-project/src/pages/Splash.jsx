@@ -21,7 +21,7 @@ const Splash = () => {
       throw new Error("Something went wrong!");
     });
     const request2 = fetch(
-      `https://gateway.marvel.com/v1/public/characters/${id}/comics?format=comic&formatType=comic&noVariants=false&dateDescriptor=thisMonth&limit=3&ts=1&apikey=869df33cbed7f29ac109149da9ccf83e&hash=d43a9e6097fe7b58c5be2871a3983e8c`
+      `https://gateway.marvel.com/v1/public/characters/${id}/comics?format=comic&formatType=comic&noVariants=false&limit=10&ts=1&apikey=869df33cbed7f29ac109149da9ccf83e&hash=d43a9e6097fe7b58c5be2871a3983e8c`
     ).then((response) => response.json());
 
     Promise.all([request1, request2]).then(([data1, data2]) => {
@@ -43,24 +43,20 @@ const Splash = () => {
               alt={data.name}
               className={styles["bio-img"]}
             />
+            <p>{data.description}</p>
           </div>
         ))}
-        {marvel.map((data2) => (
-          <div key={data2.id} className={styles["container-two"]}>
-            <p>{data2.description}</p>
-            <div className={styles["comic-container"]}>
-              {comic.map((data3) => (
-                <div key={data3.id}>
-                  <h1>{data3.title}</h1>
-                  <img
-                    src={`${data3.thumbnail.path}.${data3.thumbnail.extension}`}
-                    alt={data3.name}
-                  />
-                </div>
-              ))}
+        <div className={styles["comic-container"]}>
+          {comic.map((data2) => (
+            <div key={data2.id} className={styles["comic-div"]}>
+              <h1>{data2.title}</h1>
+              <img
+                src={`${data2.thumbnail.path}.${data2.thumbnail.extension}`}
+                alt={data2.name}
+              />
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <Footer />
     </React.Fragment>

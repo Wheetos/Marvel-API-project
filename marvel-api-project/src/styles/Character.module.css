@@ -1,10 +1,14 @@
 .flexbox {
   display: flex;
-  height: 100dvh;
+  min-height: 100dvh;
 }
 
 .container-one {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  padding-top: 50px;
 }
 
 .container-one h1 {
@@ -13,24 +17,42 @@
   padding-bottom: 2.5rem;
 }
 
-.container-two {
-  width: 50%;
+.container-one p {
+  font-size: 1.3rem;
+  font-weight: 200;
+  width: 85%;
   padding-top: 20px;
 }
 
 .bio-img {
-  height: 425px;
+  height: 325px;
 }
 
 .comic-container {
   display: flex;
-}
-
-.comic-container img {
-  height: 270px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
+  align-items: center;
 }
 
 .comic-container h1 {
-  color: red;
   font-size: 1.1rem;
+}
+
+.comic-div {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comic-div img {
+  height: 380px;
+  width: 240px;
+}
+
+.comic-div h1 {
+  font-size: 0.98rem;
+  width: 85%;
 }
