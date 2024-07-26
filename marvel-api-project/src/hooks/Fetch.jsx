@@ -9,10 +9,10 @@ const Fetch = () => {
   const [marvel2, SetMarvel2] = useState([]);
   useEffect(() => {
     const request1 = fetch(
-      "https://gateway.marvel.com/v1/public/characters?limit=100&ts=1&apikey=869df33cbed7f29ac109149da9ccf83e&hash=d43a9e6097fe7b58c5be2871a3983e8c"
+      "https://gateway.marvel.com/v1/public/characters?limit=25&ts=1&apikey=869df33cbed7f29ac109149da9ccf83e&hash=d43a9e6097fe7b58c5be2871a3983e8c"
     ).then((response) => response.json());
     const request2 = fetch(
-      "https://gateway.marvel.com/v1/public/characters?limit=100&offset=100&ts=1&apikey=869df33cbed7f29ac109149da9ccf83e&hash=d43a9e6097fe7b58c5be2871a3983e8c"
+      "https://gateway.marvel.com/v1/public/characters?limit=25&offset=100&ts=1&apikey=869df33cbed7f29ac109149da9ccf83e&hash=d43a9e6097fe7b58c5be2871a3983e8c"
     ).then((response) => response.json());
 
     Promise.all([request1, request2]).then(([data1, data2]) => {
@@ -25,17 +25,6 @@ const Fetch = () => {
     <React.Fragment>
       <div className="wrapper">
         {marvel.map((data) => (
-          <div key={data.id}>
-            <div className="card">
-              <img
-                src={`${data.thumbnail.path}.${data.thumbnail.extension}`}
-                alt={data.name}
-              />
-              <p>{data.name}</p>
-            </div>
-          </div>
-        ))}
-        {marvel2.map((data) => (
           <div key={data.id}>
             <div className="card">
               <img
